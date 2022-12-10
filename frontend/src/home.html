@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <link href="//db.onlinewebfonts.com/c/2545d122b16126676225a5b52283ae23?family=VCR+OSD+Mono" rel="stylesheet" type="text/css"/>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="head">
+        <img src="../assets/messageImage_1670508195732-removebg-preview.png" alt="" class="logofood">
+        
+        <div class="userdetail">
+            <input class="name" type="text" readonly>
+            <button type="submit" onclick="logout()" class="btn btn-primary logout">logout</button>
+        </div>
+    </div>
+  
+    <!-- <div class="container"> -->
+        <div class="row">
+            <div class="col-4" id="queue">
+                <div id="your">
+                    <h2>Your queue</h2>
+                </div>
+                <div class="cp">
+                    <form action="http://127.0.0.1:3000/deletequeue" method="POST">
+                        <img src="../assets/yh-removebg-preview.png" alt="" class="img-order">
+                        <h2 id="cp">
+                            Order 
+                            <br>
+                            complete
+                        </h2>
+                        <input type="hidden" name="id" id="iduser" readonly>
+                    <button type="submit" class="btn btn-primary" onclick="complete()" id="prs">Press</button>
+
+                    </form>
+                </div>
+            </div>
+            <div class="col-8 shopfood">
+                <div class="row" >
+                    <div class="col-5">
+                        <form action="http://127.0.0.1:3000/queuea" method="POST">
+                            <input type="hidden" name="id" id="iduser" readonly>
+                            <input type="text" name="shopa" id="shopa" value="a" hidden>
+                            <p>ร้านสุดสวย</p>
+                            <img src="../assets/1.jpg" alt="shopA" class="img-food">
+                            <button type="submit"class="btn btn-primary bk" onclick="booking()">reserve</button>
+                        </form>
+                    </div>
+                    <div class="col-5">
+                        <form action="http://127.0.0.1:3000/queueb" method="POST">
+                            <input type="hidden" name="id" id="iduser" readonly>
+                            <input type="text" name="shopb" id="shopb" value="b" hidden>
+                            <p>ร้านป้าร้าน5</p>
+                            <img src="../assets/2.jpg" alt="shopB" class="img-food">
+                            <button type="submit"class="btn btn-primary bk">reserve</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        <form action="http://127.0.0.1:3000/queuec" method="POST">
+                            <input type="hidden" name="id" id="iduser" readonly>
+                            <input type="text" name="shopc" id="shopc" value="c" hidden>
+                            <p>ร้านข้าวแกง</p>
+                            <img src="../assets/3.jpg" alt="shopC" class="img-food">
+                            <button type="submit"class="btn btn-primary bk">reserve</button>
+                        </form>
+                    </div> 
+                    <div class="col-5">
+                        <form action="http://127.0.0.1:3000/queued" method="POST">
+                            <input type="hidden" name="id" id="iduser" readonly>
+                            <input type="text" name="shopd" id="shopd" value="d" hidden>
+                            <p>ร้านแกงกะหรี่</p>
+                            <img src="../assets/4.jpg" alt="shopD" class="img-food">
+                            <button type="submit"class="btn btn-primary bk">reserve</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        <form action="http://127.0.0.1:3000/queuee" method="POST">
+                            <input type="hidden" name="id" id="iduser" readonly>
+                            <input type="text" name="shope" id="shope" value="e" hidden>
+                            <p>ร้านอุด้ง</p>
+                            <img src="../assets/5.jpg" alt="shopE" class="img-food">
+                            <button type="submit"class="btn btn-primary bk">reserve</button>
+                        </form>
+                    </div> 
+                    <div class="col-5">
+                        <form action="http://127.0.0.1:3000/queuef" method="POST">
+                            <input type="hidden" name="id" id="iduser" readonly>
+                            <input type="text" name="shopf" id="shopf" value="f" hidden>
+                            <p>ร้านสุดหล่อ</p>
+                            <img src="../assets/6.jpg" alt="shopF" class="img-food">
+                            <button type="submit" class="btn btn-primary bk">reserve</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+</body>
+<script src="../js/index.js"></script>
+
+</html>
